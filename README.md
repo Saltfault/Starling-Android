@@ -16,11 +16,11 @@ The mobile build has the hardest constraints of any client — background connec
 
 ## How it's built (planned)
 
-Same stack as the desktop and web clients: a **Solid.JS** frontend in a **Tauri** shell (Tauri targets Android as well as desktop), with the [`starling-server`](https://forgejo.hearthhome.lol/Saltfault/Starling-Server) library as the Rust backend, cross-compiled for `aarch64-linux-android`. Sharing the frontend and core with the other clients is the whole point — the mobile-specific work is in the shell, not the protocol.
+Same stack as the desktop and web clients: a **SolidJS** frontend in a **Tauri** shell (Tauri targets Android as well as desktop), with the [`starling-server`](https://forgejo.hearthhome.lol/Saltfault/Starling-Server) library as the Rust backend, cross-compiled for `aarch64-linux-android`. Sharing the frontend and core with the other clients is the whole point — the mobile-specific work is in the shell, not the protocol.
 
 | Piece | Stack |
 |-------|-------|
-| Frontend | Solid.JS |
+| Frontend | SolidJS |
 | App shell | Tauri (Android target) |
 | Protocol / networking | [`starling-server`](https://forgejo.hearthhome.lol/Saltfault/Starling-Server) library, cross-compiled for Android |
 | Open questions | Background service model, push/wake strategy, foreground-call notifications |
